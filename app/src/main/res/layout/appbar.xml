@@ -20,7 +20,7 @@
         android:layout_marginEnd="173dp"
         android:layout_marginBottom="0dp"
         android:gravity="center"
-        android:text="Timeaskjdhfgakjshdfgkuas"
+        android:text="TimeKee"
         android:textColor="@color/white"
         android:textSize="16dp" />
 

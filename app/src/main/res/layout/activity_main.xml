@@ -134,7 +134,7 @@
         android:background="@drawable/textviewshape"
         android:ems="10"
         android:hint="Mật khẩu"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

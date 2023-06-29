@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Yêu cầu nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     }
                     else if(Email != "" && Password != ""){
-                        
-                    
                         Boolean check = checkEmailPassword(Email, Password);
                         if (check == true) {
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);

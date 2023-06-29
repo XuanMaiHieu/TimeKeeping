@@ -54,6 +54,7 @@ public class ThemGioLamActivity extends AppCompatActivity {
         TextView txtGioVaoCa = (TextView) dialog.findViewById(R.id.textView_gio_vao_ca);
         TextView txtGioHetCa = (TextView) dialog.findViewById(R.id.textView_gio_het_ca);
         TextView txtTongThoiGian = (TextView) dialog.findViewById(R.id.textView_tong_thoi_gian);
+        TextView txtTenCa = (TextView) dialog.findViewById(R.id.textView_them_ten_ca);
         Button btnThemCaVaoListView = (Button) dialog.findViewById(R.id.button_them_vao_listView);
 
         txtGioVaoCa.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +108,8 @@ public class ThemGioLamActivity extends AppCompatActivity {
                 double tongthoigian = TinhGio();
                 Toast.makeText(ThemGioLamActivity.this, String.valueOf(tongthoigian), Toast.LENGTH_SHORT).show();
 //
-//               database.QueryData("CREATE TABLE IF NOT EXISTS tblThemGio(Id INTEGER PRIMARY KEY AUTOINCREMENT, TenCa VARCHAR(20),DOUBLE )");
+               database.QueryData("CREATE TABLE IF NOT EXISTS tblThemGio(Id INTEGER PRIMARY KEY AUTOINCREMENT, TenCa VARCHAR(20),TongThoiGian DOUBLE)");
+//               database.QueryData("INSERT INTO tblThemGio(null,'"++"')");
             }
         });
 

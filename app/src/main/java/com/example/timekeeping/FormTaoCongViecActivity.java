@@ -124,7 +124,7 @@ public class FormTaoCongViecActivity extends AppCompatActivity {
                     database.QueryData("INSERT INTO tblCongViec VALUES (null, '"+tenCV+"','"+HinhThuc+"','"+IdDangNhap+"','"+ngayBatDau+"','"+HinhThucLuong+"','"+0+"','"+LayGio+"','"+LayPhut+"','"+GhiChu+"' ) ");
                 }
 
-                Intent intent = new Intent(FormTaoCongViecActivity.this, HomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 startActivity(intent);
             }

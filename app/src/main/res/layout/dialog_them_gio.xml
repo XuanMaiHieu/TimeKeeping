@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="84dp"
             android:text="Giờ vào ca: "
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,19 +62,19 @@
             android:id="@+id/textView_gio_vao_ca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="88dp"
+            android:background="@color/LightGreen"
             android:text="Giờ:Phút"
             android:textSize="20dp"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/LightGreen"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView_tong_thoi_gian"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="72dp"
             android:background="@color/LightRed"
             android:text="Giờ.0"
@@ -86,11 +86,33 @@
             android:id="@+id/button_them_vao_listView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="44dp"
             android:text="Thêm Ca"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView12312"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="36dp"
+            android:text="Tên ca: "
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_them_ten_ca"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="36dp"
+            android:text="Sang"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/textView12312"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

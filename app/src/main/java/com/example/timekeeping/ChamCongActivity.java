@@ -24,6 +24,8 @@ public class ChamCongActivity extends AppCompatActivity {
 
     private int HinhThucChamCong;
     private int LuongTrongNgay;
+    private  int TongLuong;
+    private int IdNguoiDung;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,6 @@ public class ChamCongActivity extends AppCompatActivity {
 
         int idCongViec = getIntent().getIntExtra("ID_CONG_VIEC", -1);
         String NgayDuocChon = getIntent().getStringExtra("NGAY_DUOC_CHON");
-//        Toast.makeText(this, NgayDuocChon, Toast.LENGTH_SHORT).show();
         Toast.makeText(this, String.valueOf(idCongViec), Toast.LENGTH_SHORT).show();
         txtNgayCham.setText(NgayDuocChon);
 
@@ -64,6 +65,9 @@ public class ChamCongActivity extends AppCompatActivity {
             }
             txtLuong.setText(cursor.getString(5));
             LuongTrongNgay = Integer.parseInt(cursor.getString(5));
+            TongLuong = Integer.parseInt(cursor.getString(6));
+
+
         }
 
 
@@ -71,7 +75,13 @@ public class ChamCongActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(HinhThucChamCong == 1){
-                    Toast.makeText(ChamCongActivity.this, "Cham Cong theo Ngay", Toast.LENGTH_SHORT).show();
+//                    database.QueryData("CREATE TABLE IF NOT EXISTS tblThemGio(Id INTEGER PRIMARY KEY AUTOINCREMENT, TenCa VARCHAR(20),TongThoiGian DOUBLE)");
+                    int LuongMoi = (TongLuong + LuongTrongNgay);
+                    database.QueryData("INSERT INTO tblChamCong VALUES (null, '"+NgayDuocChon+"', '"+1+"','"+LuongTrongNgay+"','"+idCongViec+"')");
+                    database.QueryData("UPDATE tblCongViec SET TongLuong = '"+ LuongMoi +"' WHERE Id = '"+idCongViec+"'");
+                    Intent intent = new Intent(ChamCongActivity.this, ChiTietCongViecActivity.class);
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    startActivity(intent);
                 } else if (HinhThucChamCong == 2) {
                     Intent intent = new Intent(ChamCongActivity.this, ThemGioLamActivity.class);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

@@ -37,7 +37,7 @@ public class DangKyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = edtTenNguoiDung.getText().toString();
-                String email = edtEmail.getText().toString();
+                String email = edtEmail.getText().toString().toLowerCase();
                 String password = edtPass.getText().toString();
                 String confirm = edtConfirm.getText().toString();
 
