@@ -23,7 +23,7 @@ public class CongViecAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return congViecList.size();
     }
 
     @Override
@@ -61,9 +61,7 @@ public class CongViecAdapter extends BaseAdapter {
         }
         else{
             holder = (ViewHolder) convertView.getTag();
-
         }
-
 
         CongViec congViec = congViecList.get(position);
         holder.txtTen.setText(congViec.getTenCV());

@@ -192,14 +192,14 @@ public class FormTaoCongViecActivity extends AppCompatActivity {
 
     //Ham lay id nguoi dung
     private void getId (){
-        Cursor cursor = database.GetData("SELECT * FROM CheckLogin",null);
+        Cursor cursor = database.GetData("SELECT * FROM tblKiemTraDangNhap",null);
         while (cursor.moveToNext()){
             IdDangNhap = cursor.getString(1);
         }
     }
     //Ham check trung ten cong viec
     public Boolean checkTenCongViec (String tenCongViec){
-        Cursor cursor = database.GetData("SELECT * FROM CongViec WHERE TenCV = ?",new String[]{tenCongViec});
+        Cursor cursor = database.GetData("SELECT * FROM tblCongViec WHERE TenCV = ?",new String[]{tenCongViec});
         if(cursor.getCount() > 0 ){
             return true;
         }
