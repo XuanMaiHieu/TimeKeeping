@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public Boolean checkEmailPassword (String email, String pass){
-        Cursor cursor = database.GetData("SELECT * FROM User WHERE Email = ? AND UserPass = ?", new String[]{email,pass});
+        Cursor cursor = database.GetData("SELECT * FROM tblNguoiDung WHERE TenDangNhap = ? AND MatKhau = ?", new String[]{email,pass});
         if(cursor.getCount() > 0){
             while(cursor.moveToNext()){
                 String id =cursor.getString(0);

@@ -13,16 +13,16 @@
         android:theme="@style/Theme.TimeKeeping"
         tools:targetApi="31">
         <activity
+            android:name=".ChiTietCongViecActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormTaoCongViecActivity"
+            android:exported="false" />
+        <activity
             android:name=".DangKyActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".user.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".user.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

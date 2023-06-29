@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:fillViewport="true"
+    tools:context=".FormTaoCongViecActivity"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textView_ten_cong_viec"
+            android:layout_width="254dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="44dp"
+            android:text="Nhap ten cong viec"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editText_ten_cong_viec"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:hint="Tên công việc"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/textView_ten_cong_viec"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView_ten_cong_viec"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ten_cong_viec" />
+
+        <TextView
+            android:id="@+id/textView_hinh_thuc"
+            android:layout_width="254dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="36dp"
+            android:text="Hinh Thuc"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText_ten_cong_viec"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editText_ten_cong_viec"
+            app:layout_constraintTop_toBottomOf="@+id/editText_ten_cong_viec" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_hinh_thuc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_hinh_thuc">
+
+            <!--    android:visibility="gone"-->
+
+            <RadioGroup
+                android:id="@+id/radioGroup_hinh_thuc"
+                android:layout_width="227dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/textView_hinh_thuc"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/textView_hinh_thuc"
+                app:layout_constraintTop_toBottomOf="@+id/textView_hinh_thuc">
+
+
+                <RadioButton
+                    android:id="@+id/radioButtonTheoNgay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theo ngày  " />
+
+                <RadioButton
+                    android:id="@+id/radioButtonTheoGio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theo giờ" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_ngay"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup_hinh_thuc">
+
+                <TextView
+                    android:id="@+id/textView_theo_ngay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="28dp"
+                    android:text="Nhập tiền công ngày"
+                    app:layout_constraintEnd_toEndOf="@+id/radioGroup_hinh_thuc"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView_hinh_thuc"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup_hinh_thuc" />
+
+                <EditText
+                    android:id="@+id/editText_luong_ngay"
+                    android:layout_width="263dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="60dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.499" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_gio"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup_hinh_thuc"
+
+                >
+
+                <TextView
+                    android:id="@+id/textView_theo_gio"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Nhập tiền công giờ"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.401" />
+
+                <EditText
+                    android:id="@+id/editText_luong_gio"
+                    android:layout_width="263dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="60dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.499" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_ngay_bat_dau"
+            android:layout_width="341dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="24dp"
+            android:text="Ngày bắt đầu"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout_hinh_thuc"
+            app:layout_constraintHorizontal_bias="0.131"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout_hinh_thuc"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_hinh_thuc" />
+
+        <EditText
+            android:id="@+id/editText_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Chọn ngày"
+            android:focusable="false"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView_ngay_bat_dau"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/textView_ngay_bat_dau"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ngay_bat_dau" />
+
+        <TextView
+            android:id="@+id/textView_thoi_gian_nhac_nho"
+            android:layout_width="341dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="28dp"
+            android:text="Thời gian nhắc nhở"
+
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText_date"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/editText_date"
+            app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+        <EditText
+            android:id="@+id/editText_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="Chọn giờ"
+            android:minHeight="48dp"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="@+id/textView_thoi_gian_nhac_nho"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/textView_thoi_gian_nhac_nho"
+            app:layout_constraintTop_toBottomOf="@+id/textView_thoi_gian_nhac_nho" />
+
+
+        <TextView
+            android:id="@+id/textView_ghi_chu"
+            android:layout_width="355dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="8dp"
+
+            android:text="Ghi chú"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText_time"
+            app:layout_constraintHorizontal_bias="0.462"
+            app:layout_constraintStart_toStartOf="@+id/editText_time"
+            app:layout_constraintTop_toBottomOf="@+id/editText_time" />
+
+        <EditText
+            android:id="@+id/editText_ghi_chu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="ghi chú...."
+            android:inputType="text"
+            android:maxLines="10"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView_ghi_chu"
+            app:layout_constraintHorizontal_bias="0.406"
+            app:layout_constraintStart_toStartOf="@+id/textView_ghi_chu"
+            app:layout_constraintTop_toBottomOf="@+id/textView_ghi_chu" />
+
+        <Button
+            android:id="@+id/button_xac_nhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="xác nhận"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="@+id/editText_ghi_chu"
+            app:layout_constraintHorizontal_bias="0.687"
+            app:layout_constraintStart_toStartOf="@+id/editText_ghi_chu"
+            app:layout_constraintTop_toBottomOf="@+id/editText_ghi_chu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Danh sách quản lý công việc"
+        android:textColor="@color/DarkBlue"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ListView
+        android:id="@+id/list_cong_viec"
+        android:layout_width="match_parent"
+        android:layout_height="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
