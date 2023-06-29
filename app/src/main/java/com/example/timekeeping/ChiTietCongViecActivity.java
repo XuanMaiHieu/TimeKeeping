@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.CalendarView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ChiTietCongViecActivity extends AppCompatActivity {
 
@@ -42,7 +43,7 @@ public class ChiTietCongViecActivity extends AppCompatActivity {
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
                 Intent intent = new Intent(ChiTietCongViecActivity.this, ChamCongActivity.class);
-
+                intent.putExtra("ID_CONG_VIEC",idCongViec);
                 intent.putExtra("NGAY_DUOC_CHON",selectedDate);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 startActivity(intent);
