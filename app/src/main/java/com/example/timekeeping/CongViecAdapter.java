@@ -69,6 +69,8 @@ public class CongViecAdapter extends BaseAdapter {
         holder.txtTongLuong.setText(String.valueOf(congViec.getTongLuong()));
 
 
+
+
         return convertView;
     }
 }

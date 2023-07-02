@@ -7,8 +7,8 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.timekeeping"
-        minSdk 28
+          "com.example.timekeeping"
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
